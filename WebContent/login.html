@@ -1,0 +1,100 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<title>Login | Trading Platform</title>
+
+<!-- CSS Files -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/paper-bootstrap-wizard.css" rel="stylesheet" />
+<link href="/css/animate.css" rel="stylesheet">
+<link href="/css/site.css" rel="stylesheet">
+
+<link href=css/demo.css " rel="stylesheet" />
+
+<!-- Fonts and Icons -->
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href='css/css3.css' rel='stylesheet' type='text/css'>
+<link href="css/themify-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+<link rel="stylesheet" type="text/css" href="css/MyStyles.css" />
+
+<script src="js/login.js"></script>
+<script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="image-container set-full-height">
+		<link rel="shortcut icon" href="images/cloud.png">
+		<a class="navbar-brand crawler-logo" href="/"><b class="app-name">Trading
+				Platform</b></a>
+
+		<!--   Big container   -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-5 col-sm-offset-4 login-div">
+
+					<!--      Wizard container        -->
+					<div class="wizard-container">
+
+						<div class="card wizard-card plain-card animate-box"
+							data-animate-effect="fadeIn" data-color="red" id="wizardProfile">
+
+							<form name="loginForm" method="post" action="LoginServlet">
+
+
+								<div class="wizard-header text-center">
+									<h3 class="wizard-title uppercase">Sign In</h3>
+								</div>
+
+								<div class="wizard-navigation"></div>
+								<div class="tab-content">
+									<div class="tab-pane active" id="signin">
+
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group login-form">
+													<label class="sr-only">UserName <small>(required)</small></label>
+													<input id="username-input" name="email" type="email"
+														class="form-control" placeholder="username (required)">
+												</div>
+											</div>
+											<div class="col-sm-12">
+												<div class="form-group login-form">
+													<label class="sr-only">Password <small>(required)</small></label>
+													<input id="password-input" name="password" type="password"
+														class="form-control " placeholder="password">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-footer ">
+									<div class="pull-right ">
+										<input type='submit'
+											class='btn btn-finish btn-danger2 login-btn' name='finish'
+											value='Login'/>
+									</div>
+									<div class="clearfix "></div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- wizard container -->
+				</div>
+			</div>
+			<!-- end row -->
+		</div>
+		<!--  big container -->
+
+		<div class="footer ">
+			<div class="container text-center "></div>
+		</div>
+	</div>
+
+	
+</body>
+</html>
