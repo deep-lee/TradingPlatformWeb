@@ -25,63 +25,90 @@
       ]</script>
 <!-- End Piwik Code -->
 
-<style type="text/css"> 
-body { 
-font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
-    color: #4f6b72; 
-    background: #E6EAE9; } 
-a { 
-    color: #c75f3e; } 
-#mytable { 
-    width: 400px; 
-    padding: 0; 
-    margin: 0; } 
-caption { 
-    padding: 0 0 5px 0; 
-    width: 700px;      
-font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
-    text-align: right; } 
-th { 
-font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
-    color: #4f6b72; 
-    border-right: 1px solid #C1DAD7; 
-    border-bottom: 1px solid #C1DAD7; 
-    border-top: 1px solid #C1DAD7; 
-    letter-spacing: 2px; 
-    text-transform: uppercase; 
-    text-align: left; 
-    padding: 6px 6px 6px 12px; 
-    background: #CAE8EA; } 
-th.nobg { 
-    border-top: 0; 
-    border-left: 0; 
-    border-right: 1px solid #C1DAD7; 
-    background: none; } 
-td { 
-    border-right: 1px solid #C1DAD7; 
-    border-bottom: 1px solid #C1DAD7; 
-    background: #fff; 
-    font-size:11px; 
-    padding: 6px 6px 6px 12px; 
-    color: #4f6b72; } 
-td.alt { 
-    background: #F5FAFA; 
-    color: #797268; } 
-th.spec { 
-    border-left: 1px solid #C1DAD7; 
-    border-top: 0; 
-    background: #fff; 
-font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
-} 
-th.specalt { 
-    border-left: 1px solid #C1DAD7; 
-    border-top: 0; 
-    background: #f5fafa; 
-font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
-    color: #797268; } 
+<style type="text/css">
+body {
+	font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica,
+		sans-serif;
+	color: #4f6b72;
+	background: #E6EAE9;
+}
+
+a {
+	color: #c75f3e;
+}
+
+#mytable {
+	width: 500px;
+	padding: 10px;
+	margin: 20px;
+}
+
+caption {
+	padding: 0 0 5px 0;
+	width: 700px;
+	font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: right;
+}
+
+th {
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+	background: #CAE8EA;
+}
+
+th.nobg {
+	border-top: 0;
+	border-left: 0;
+	border-right: 1px solid #C1DAD7;
+	background: none;
+}
+
+td {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	font-size: 11px;
+	padding: 6px 6px 6px 12px;
+	color: #4f6b72;
+}
+
+td.alt {
+	background: #F5FAFA;
+	color: #797268;
+}
+
+th.spec {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #fff;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+th.specalt {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #f5fafa;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #797268;
+}
+
 html>body td {
-    font-size:11px;} 
+	font-size: 11px;
+}
 </style>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/orderbook.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
 </head>
 <body class="">
 	<div class="with-newsletter sticked-navbar" data-reactid=".0">
@@ -118,12 +145,12 @@ html>body td {
 								data-reactid=".0.0.0.1.0.0:2.0.0">Make Trades</span><span
 								data-reactid=".0.0.0.1.0.0:2.0.1"> </span></a></li>
 						<li role="presentation" data-reactid=".0.0.0.1.0.0:3"><a
-							id="link_signin" href="https://teamemo.com/#signin"
-							data-reactid=".0.0.0.1.0.0:3.0">Sign in</a></li>
-						<li class="dropdown" data-reactid=".0.0.0.1.0.1"><a href="#"
-							class="dropdown-toggle" data-toggle="dropdown" role="button"
-							aria-haspopup="true" aria-expanded="false"
-							data-track-category="lang"
+							id="link_signin" href="javascript:void(0)" onclick="logout()"
+							data-reactid=".0.0.0.1.0.0:3.0">Sign out</a></li>
+						<li class="dropdown" data-reactid=".0.0.0.1.0.1"><a
+							href="javascript:void(0)" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false" data-track-category="lang"
 							data-track-action="toggle-lang-dropdown"
 							data-reactid=".0.0.0.1.0.1.0"><span class="lang-icon"
 								title="Strategies" data-reactid=".0.0.0.1.0.1.0.0">Strategies</span><span
@@ -142,6 +169,9 @@ html>body td {
 									data-reactid=".0.0.0.1.0.1.1.$de.0"><span class="lang-icon"
 										title="Strategie2" data-reactid=".0.0.0.1.0.1.1.$de.0.0">Strategie2</span></a></li>
 							</ul></li>
+						<li role="presentation" data-reactid=".0.0.0.1.0.0:3"><a
+							id="link_usename" href="javascript:void(0)"
+							data-reactid=".0.0.0.1.0.0:3.0"></a></li>
 					</ul>
 				</div>
 			</div>
@@ -169,17 +199,81 @@ html>body td {
 			</div>
 		</div>
 	</div>
-	<div class="symbol-table">
-		<table id="mytable" cellspacing="0">
-			<tr>
-				<th scope="col" abbr="Configurations">Symbol</th>
-				<th scope="col" abbr="Dual 1.8">Qty</th>
-				<th scope="col" abbr="Dual 2">Bid</th>
-				<th scope="col" abbr="Dual 2">Ask</th>
-				<th scope="col" abbr="Dual 2">Qty</th>
-			</tr>
-			
-		</table>
+	<div class="container" data-reactid=".0.1.0.0.2:0.0.1">
+		<div class="row" data-reactid=".0.1.0.0.2:0.0.1.0">
+			<div class="col-md-12 phone-preview"
+				data-reactid=".0.1.0.0.2:0.0.1.0.0">
+				<div class="symbol-table">
+					<center><h3 id='symbol-name'>Level 2 Order Book</h3></center>
+					<center><table id="mytable" cellspacing="0">
+						<tr>
+							<th scope="col" abbr="Configurations">Symbol</th>
+							<th scope="col" abbr="Dual 1.8">Qty</th>
+							<th scope="col" abbr="Dual 2">Bid</th>
+							<th scope="col" abbr="Dual 2">Ask</th>
+							<th scope="col" abbr="Dual 2">Qty</th>
+						</tr>
+					</table></center>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container" data-reactid=".0.1.0.0.2:0.0.1">
+		<div class="row" data-reactid=".0.1.0.0.2:0.0.1.0">
+			<div class="col-md-12 phone-preview"
+				data-reactid=".0.1.0.0.2:0.0.1.0.0">
+				<div class="sign-card" id="symbol_form"
+					data-reactid=".0.1.0.0.2:0.0.1.0.0.$signin">
+					<h3 data-reactid=".0.1.0.0.2:0.0.1.0.0.$signin.0">Order
+						Details</h3>
+					<form class="form-sign" id="symbolForm" onsubmit="return false;"
+						data-reactid=".0.1.0.0.2:0.0.1.0.0.$signin.1"
+						id="form-order">
+						<label>Symbol</label> <input id="order-symbol" class="form-control"
+							type="text" required="" name="symbol" placeholder="Symbol"
+							data-reactid=".0.1.0.0.2:0.0.1.0.0.$signin.1.2"> <label>Type</label>
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button"
+								id="choose_order_type" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="true">Choose Order Type<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="javascript:void(0)"
+									onclick="click_type(event)">Market Orders</a></li>
+								<li><a href="javascript:void(0)"
+									onclick="click_type(event)">IOC</a></li>
+								<li><a href="javascript:void(0)"
+									onclick="click_type(event)">FOK</a></li>
+								<li><a href="javascript:void(0)"
+									onclick="click_type(event)">GTC</a></li>
+							</ul>
+						</div>
+						<label>B/O</label>
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button"
+								id="choose_b_o_type" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="true">Buy / Offer<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="javascript:void(0)" onclick="b_o_type(event)">Buy</a></li>
+								<li><a href="javascript:void(0)" onclick="b_o_type(event)">Offer</a></li>
+							</ul>
+						</div>
+						<label>Quantity</label> <input id="buy_offer_quantity"
+							class="form-control" type="text" required="" name="symbol"
+							placeholder="Quantity"
+							onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+							onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+							data-reactid=".0.1.0.0.2:0.0.1.0.0.$signin.1.2"> <input
+							id="symbol-btn" onclick="submit_order()"
+							class="btn btn-primary btn-block btn-lg btn-signin" type="submit"
+							data-reactid=".0.1.0.0.2:0.0.1.0.0.$signin.1.4" value="Submit"></input>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<footer style="margin-top: 5px;" data-reactid=".0.3">
@@ -203,8 +297,5 @@ html>body td {
 			</div>
 		</div>
 	</footer>
-
-	<script src="js/orderbook.js"></script>
-	<script src="js/jquery.min.js"></script>
 </body>
 </html

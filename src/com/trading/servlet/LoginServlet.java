@@ -46,7 +46,7 @@ public class LoginServlet extends HttpServlet {
              HashMap<String, Object> responseData = new HashMap<> ();
              Trader trader = LoginService.getTraderByNameAndPass (username, pass);
              request.getSession ().setAttribute ("trader", trader);
-             responseData.put ("login", true);
+             responseData.put ("login", result);
              responseData.put ("trader", trader);
              out.append(new Gson ().toJson (responseData));
         }

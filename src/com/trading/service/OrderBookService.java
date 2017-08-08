@@ -41,10 +41,11 @@ public class OrderBookService
         ResultSet rs1 = preparedStatement1.executeQuery ();
         while (rs1.next()){
             OrderBook tradeBook = new OrderBook ();
-            tradeBook.setSymbol (rs1.getString (1));
-            tradeBook.setQuanlity (rs1.getInt (2));
-            tradeBook.setType (rs1.getInt (3));
-            tradeBook.setPrice (rs1.getDouble (4));
+            tradeBook.setId (rs1.getInt (1));
+            tradeBook.setSymbol (rs1.getString (2));
+            tradeBook.setQuanlity (rs1.getInt (3));
+            tradeBook.setType (rs1.getInt (4));
+            tradeBook.setPrice (rs1.getDouble (5));
             returnDataType1.add (tradeBook);
         }
         
@@ -56,10 +57,11 @@ public class OrderBookService
         ResultSet rs0 = preparedStatement0.executeQuery ();
         while (rs0.next()){
             OrderBook tradeBook = new OrderBook ();
-            tradeBook.setSymbol (rs0.getString (1));
-            tradeBook.setQuanlity (rs0.getInt (2));
-            tradeBook.setType (rs0.getInt (3));
-            tradeBook.setPrice (rs0.getDouble (4));
+            tradeBook.setId (rs0.getInt (1));
+            tradeBook.setSymbol (rs0.getString (2));
+            tradeBook.setQuanlity (rs0.getInt (3));
+            tradeBook.setType (rs0.getInt (4));
+            tradeBook.setPrice (rs0.getDouble (5));
             returnDataType0.add (tradeBook);
         }
         System.out.println (returnDataType0);

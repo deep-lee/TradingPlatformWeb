@@ -1585,11 +1585,10 @@ pre code {
   display: inline-block;
 }
 .symbol-table-container {
-  /* margin-right: auto;
+  margin-right: auto;
   margin-left: 10px;
   padding-left: 10px;
-  padding-right: 10px; */
-/*   display: inline-block; */
+  padding-right: 10px;
 }
 @media (min-width: 768px) {
   .container {
@@ -7518,7 +7517,7 @@ h2 .red:hover {
   font-size: 1.5em;
 }
 .sign-card {
-  max-width: 450px;
+  /* max-width: 450px; */
   padding: 40px 40px;
   margin: 0 auto 25px;
   margin-top: 50px;
@@ -7529,7 +7528,7 @@ h2 .red:hover {
 }
 
 .symbol-table {
-  max-width: 450px;
+  /* max-width: 450px; */
   padding: 40px 40px;
   margin: 0 auto 25px;
   margin-top: 50px;
@@ -7540,7 +7539,7 @@ h2 .red:hover {
 }
 
 .symbol-card {
-  max-width: 450px;
+  /* max-width: 450px; */
   padding: 40px 40px;
   margin: 0 auto 25px;
   margin-left: 20px;
@@ -7579,6 +7578,7 @@ h2 .red:hover {
 .sign-card .form-sign input[type=email],
 .sign-card .form-sign input[type=password],
 .sign-card .form-sign input[type=text],
+.sign-card .form-sign input[type=number],
 .sign-card .form-sign button {
   height: 68px;
   width: 100%;
@@ -7598,6 +7598,7 @@ h2 .red:hover {
 .symbol-card .form-symbol input[type=email],
 .symbol-card .form-symbol input[type=password],
 .symbol-card .form-symbol input[type=text],
+.symbol-card .form-symbol input[type=number],
 .symbol-card .form-symbol button {
   height: 68px;
   width: 100%;

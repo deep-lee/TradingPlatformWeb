@@ -6,8 +6,10 @@ public class Trade
     private int traderId;
     private Double price;
     private String equityId;
-    private boolean bnuy;
+    private boolean buy;
     private int amount;
+    private int type;
+    private int status;
     private String createtime;
     public Trade ()
     {
@@ -15,15 +17,17 @@ public class Trade
         // TODO Auto-generated constructor stub
     }
     public Trade (int id, int traderId, Double price, String equityId,
-        boolean bnuy, int amount, String createtime)
+        boolean buy, int amount, int type, int status, String createtime)
     {
         super ();
         this.id = id;
         this.traderId = traderId;
         this.price = price;
         this.equityId = equityId;
-        this.bnuy = bnuy;
+        this.buy = buy;
         this.amount = amount;
+        this.type = type;
+        this.status = status;
         this.createtime = createtime;
     }
     public int getId ()
@@ -58,13 +62,13 @@ public class Trade
     {
         this.equityId = equityId;
     }
-    public boolean isBnuy ()
+    public boolean isBuy ()
     {
-        return bnuy;
+        return buy;
     }
-    public void setBnuy (boolean bnuy)
+    public void setBuy (boolean buy)
     {
-        this.bnuy = bnuy;
+        this.buy = buy;
     }
     public int getAmount ()
     {
@@ -73,6 +77,22 @@ public class Trade
     public void setAmount (int amount)
     {
         this.amount = amount;
+    }
+    public int getType ()
+    {
+        return type;
+    }
+    public void setType (int type)
+    {
+        this.type = type;
+    }
+    public int getStatus ()
+    {
+        return status;
+    }
+    public void setStatus (int status)
+    {
+        this.status = status;
     }
     public String getCreatetime ()
     {

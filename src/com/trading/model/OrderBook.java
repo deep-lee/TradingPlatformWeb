@@ -2,6 +2,7 @@ package com.trading.model;
 
 public class OrderBook
 {
+    private int id;
     private String symbol;
     private int quanlity;
     private int type;
@@ -13,13 +14,26 @@ public class OrderBook
         // TODO Auto-generated constructor stub
     }
 
-    public OrderBook (String symbol, int quanlity, int type, double price)
+    public OrderBook (int id, String symbol, int quanlity, int type, double price)
     {
         super ();
+        this.id = id;
         this.symbol = symbol;
         this.quanlity = quanlity;
         this.type = type;
         this.price = price;
+    }
+
+    
+    
+    public int getId ()
+    {
+        return id;
+    }
+
+    public void setId (int id)
+    {
+        this.id = id;
     }
 
     public String getSymbol ()

@@ -10,7 +10,9 @@ function login(){
         		if(jsonarray.login === false) {
         			alert("Login failed! Retry.");
         		} else {
-        			
+        			storeTrader("username", jsonarray.trader.name);
+        			storeTrader("traderId", jsonarray.trader.id);
+        			location.href = "/TradingPlatformWeb/orderbook.html";
         		}
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -20,4 +22,10 @@ function login(){
             alert(textStatus);
         }
     });
+}
+
+function storeTrader(name,value) 
+{ 
+	sessionStorage.setItem(name,value); 
+	alert(value);
 }
